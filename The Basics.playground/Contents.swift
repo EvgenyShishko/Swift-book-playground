@@ -129,7 +129,7 @@ let age = -3
 assert(age >= -5, "A person's age can't be less than zero.")
 // This assertion fails because -3 is not >= 0
 
-//TODO: ассерты работают только в дебаге??
+// ASSERTS work in debug mode only 
 
 //Enforcing Preconditions
 //
