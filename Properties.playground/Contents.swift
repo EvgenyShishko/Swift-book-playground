@@ -20,6 +20,7 @@ var example = 3.5
 class Point {
     var x: Int?
     var y: Int?
+    
     init(x: Int, y: Int) {
         self.x = x
         self.y = x
@@ -53,3 +54,18 @@ struct AudioChannel {
         }
     }
 }
+
+struct Wheel {
+    let radius: Int
+    let material: String
+}
+
+struct Car {
+    let firm: String
+    let age: Int
+    let wheel: Wheel
+}
+let wheel = Wheel(radius: 18, material: "Resina")
+let car = Car(firm: "Mercedes benz", age: 2, wheel: wheel)
+
+// NOTE: It's impossible to observe LAZY properties

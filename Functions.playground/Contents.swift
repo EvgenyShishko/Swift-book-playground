@@ -58,6 +58,7 @@ func arithmeticMean(_ numbers: Double...) -> Double {
 }
 
 print(arithmeticMean())
+arithmeticMean()
 print(arithmeticMean(2, 0.5, -2))
 
 // In-out parametrs
@@ -94,7 +95,6 @@ func increment(_ number: Int, by multiple: Int) -> Int {
 }
 
 // Nested functions capture outscope variables and can even modify 'em
-
 print(increment(5, by: 10))
 
 

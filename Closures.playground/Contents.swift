@@ -2,11 +2,16 @@ import Foundation
 
 // Functions are special cases of closures
 let names = ["a", "aa", "b", "bb", "ccccc"]
-let sortedNames = names.sorted { (a: String, b: String) -> Bool in return a < b } // Default type
+let sortedNames = names.sorted { (a: String, b: String) -> Bool
+                    in return a < b } // Default type
 let sortedNames2 = names.sorted { a, b in return a < b } // types are ommitted
 let sortedNames3 = names.sorted { a, b in a < b } // return operator also is ommitted
 let sortedNames4 = names.sorted(by: {$0 < $1}) // short agrument names
 let sortedNAmes5 = names.sorted(by: <)
+let swift = 2
+
+let ns = NSString(string: "Hello")
+
 
 // TRAILING CLOSURES
 func someFunctionThatTakesAClosure(closure: () -> Void) {
@@ -92,6 +97,12 @@ serve(customer: customersInLine.remove(at: 0))
 
 // Выведет "Now serving Ewa!"
 
+struct IntStack {
+    var items = [Int]()
+    func add(x: Int) {
+        self.items.append(x)
+    }
+}
 
 
 

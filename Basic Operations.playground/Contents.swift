@@ -2,8 +2,6 @@
 
 import UIKit
 
-var str = "Hello, playground"
-
 //Unlike the assignment operator in C and Objective-C, the assignment operator in Swift does not itself return a value. The following statement is not valid:
 
 //if x = y {
@@ -21,8 +19,7 @@ let wholeNumber = Int(9 / 2)
 //Swift also provides two identity operators (=== and !==), which you use to test whether two object references both refer to the same object instance
 
 //You can compare two tuples if they have the same type and the same number of values. Tuples are compared from left to right, one value at a time, until the comparison finds two values that aren’t equal. Those two values are compared, and the result of that comparison determines the overall result of the tuple comparison. If all the elements are equal, then the tuples themselves are equal. For example:
-
-(1, "zebra") < (2, "apple")   // true because 1 is less than 2; "zebra" and "apple" are not compared
+(1, 4) < (2, 1)   // true because 1 is less than 2; "zebra" and "apple" are not compared
 (3, "apple") < (3, "bird")    // true because 3 is equal to 3, and "apple" is less than "bird"
 (4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"
 
@@ -30,11 +27,15 @@ let wholeNumber = Int(9 / 2)
 
 ("blue", -1) < ("purple", 1)        // OK, evaluates to true
 //("blue", false) < ("purple", true)  // Error because < can't compare Boolean values
-
+let success: String? = "ffff"
+let message = success ?? "fffff"
 
 //NOTE
 //The Swift standard library includes tuple comparison operators for tuples with fewer than SEVEN elements. To compare tuples with seven or more elements, you must implement the comparison operators yourself.
+let longTuple = (1, 2, 3, 4, 5, 6)
+let longTuple2 = (1, 2, 3, 4, 5, 6)
 
+longTuple == longTuple2
 //Closed Range Operator
 
 //The closed range operator (a...b) defines a range that runs from a to b, and includes the values a and b. The value of a must not be greater than b.
@@ -70,6 +71,7 @@ for name in names[...2] {
 //One-sided ranges can be used in other contexts, not just in subscripts. You can’t iterate over a one-sided range that omits a first value, because it isn’t clear where iteration should begin. You can iterate over a one-sided range that omits its final value; however, because the range continues indefinitely, make sure you add an explicit end condition for the loop. You can also check whether a one-sided range contains a particular value, as shown in the code below.
 
 let range = ...5
+range.contains(5)
 range.contains(7)   // false
 range.contains(4)   // true
 range.contains(-1)  // true

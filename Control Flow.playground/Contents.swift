@@ -6,6 +6,20 @@ import Foundation
 //To make a switch with a single case that matches both "a" and "A", combine the two values into a compound case, separating the values with commas.
 
 let anotherCharacter: Character = "a"
+
+enum SimpleEnum {
+    case one
+    case two
+}
+
+let enumcheg = SimpleEnum.one
+switch enumcheg {
+case .one:
+    print("one")
+case .two:
+    print("two")
+}
+
 switch anotherCharacter {
 case "a", "A":
     print("The letter A")
@@ -16,6 +30,20 @@ default:
 
 // Interval matching
 let bodyTemperature: Double = 400
+
+let number = 10
+
+switch number {
+case 0..<100:
+    print("0 to 100")
+    fallthrough
+//case 0..<9:
+//    print("0 to 9")
+//case 0..<100:
+//    print("0 to 100 last case")
+default:
+    print("default number")
+}
 
 switch bodyTemperature {
 case 0..<35.9:
@@ -30,6 +58,11 @@ case 37.5..<Double(Int.max):
     print("You're fucking sick! Go to the doctor")
 default:
     print("Try again with the measuring")
+}
+
+let minutes = 60
+for tickMark in stride(from: 0, through: minutes, by: 5) {
+    print(tickMark)
 }
 
 let somePoint = (1, 1)
@@ -96,6 +129,7 @@ let a = 6
 switch a {
 case 0..<10:
     print("0<10")
+    print("234234")
     fallthrough
 case 0:
     print("0<100")

@@ -56,4 +56,19 @@ welcome.endIndex.encodedOffset
 var substringLol = Substring()
 substringLol += "lol"
 
+var helloWorld: String = "Hello World!"
+let helloRange = helloWorld.startIndex..<helloWorld.index(helloWorld.startIndex, offsetBy: 6)
+let substringHello: Substring = helloWorld[helloRange]
+let newWord = substringHello + helloWorld
+
+_ = newWord.utf16.count
+
+let airplaneScalar: Unicode.Scalar? = Unicode.Scalar(UInt32(9992))
+let airplaneLiteral = "\u{2708}"
+print(airplaneScalar)
+print(airplaneLiteral)
+
+
+
+
 

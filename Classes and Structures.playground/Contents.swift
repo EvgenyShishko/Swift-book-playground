@@ -11,16 +11,27 @@ import UIKit
 
 // Operators === and !== used to check whether two constants or variables refer to the same single instance
 struct Point2D: Equatable{
+    var x: Double
+    var y: Double
+    var description: String {
+        return "X: \(x) Y: \(y)"
+    }
+
+    mutating func doubleXAxis () {
+        x *= 2
+    }
+    
     static func ==(lhs: Point2D, rhs: Point2D) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }
-    
-    var x: Double
-    var y: Double
 }
 
 var point = Point2D(x: 5, y: 5)
 var point2 = Point2D(x: 5, y: 5)
+print(point.description)
+
+point.doubleXAxis()
+print(point)
 
 if (point == point2) {
     print("Equals")

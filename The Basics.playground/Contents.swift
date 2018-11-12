@@ -75,7 +75,8 @@ let oneMillion = 1_000_000
 let justOverOneMillion = 1_000_000.000_000_1
 
 
-let tooBig: Int8 = Int8.max // + 1
+let tooBig: Int8 = Int8.max
+let tooBig2: Int8 = Int8.max// + 1
 // Int8 cannot store a number larger than its maximum value,
 // and so this will also report an error
 
